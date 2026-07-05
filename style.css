@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    touch-action:manipulation;
+
+    font-family:sans-serif;
+}
+
+/* ゲーム全体 */
+
+#game{
+
+    width:100vw;
+    height:100dvh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#000;
+}
+
+/* スマホ比率 */
+
+#background{
+
+    position:relative;
+
+    width:min(100vw,56.25vh);
+    height:min(177.78vw,100dvh);
+
+    background:#bde8ff;
+
+    overflow:hidden;
+}
+
+/* キャラクター */
+
+#character{
+
+    position:absolute;
+
+    left:50%;
+    top:42%;
+
+    transform:translate(-50%,-50%);
+
+    width:38%;
+    aspect-ratio:1/1;
+
+    background:white;
+
+    border:4px dashed #555;
+
+    border-radius:20px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:18px;
+}
+
+/* ボタン */
+
+#menu{
+
+    position:absolute;
+
+    bottom:4%;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:92%;
+
+    display:flex;
+
+    justify-content:space-between;
+}
+
+.menuButton{
+
+    width:31%;
+    aspect-ratio:1/1.15;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+
+    cursor:pointer;
+}
+
+.menuButton:active{
+
+    transform:scale(.96);
+}
+
+.icon{
+
+    width:55%;
+
+    aspect-ratio:1/1;
+
+    border:3px dashed gray;
+
+    border-radius:12px;
+
+    display:flex;
+}
