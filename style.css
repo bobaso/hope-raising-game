@@ -139,11 +139,11 @@ body{
 
     display:flex;
 }
-/*=====================
-    ステータスバー
-======================*/
+/*=========================
+    上部エリア
+=========================*/
 
-#statusBar{
+#statusArea{
 
     position:absolute;
 
@@ -153,6 +153,22 @@ body{
     transform:translateX(-50%);
 
     width:92%;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+/* ステータスバー */
+
+#statusBar{
+
+    position:relative;
+
+    flex:1;
+
     height:80px;
 }
 
@@ -168,7 +184,7 @@ body{
 
     border-radius:18px;
 
-    background:#eeeeee;
+    background:#eee;
 
     display:flex;
 
@@ -176,12 +192,12 @@ body{
 
     align-items:center;
 
-    font-size:20px;
-
     color:#666;
+
+    font-size:20px;
 }
 
-/* 中身 */
+/* 名前と数字 */
 
 .statusContent{
 
@@ -195,52 +211,27 @@ body{
 
     justify-content:space-between;
 
-    padding:0 20px;
+    padding:0 24px;
 
     pointer-events:none;
 }
 
-/* アイコン */
-
-.statusIcon{
-
-    width:48px;
-    height:48px;
-
-    border:2px dashed #888;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:white;
-
-    font-size:12px;
-}
-
-/* 名前 */
-
 .statusName{
-
-    flex:1;
-
-    margin-left:16px;
 
     font-size:22px;
 
     font-weight:bold;
 }
 
-/* 数字 */
-
 .statusNumber{
 
     width:60px;
+
     height:42px;
 
     border:2px dashed #888;
+
+    background:white;
 
     display:flex;
 
@@ -248,9 +239,35 @@ body{
 
     align-items:center;
 
-    background:white;
-
     font-size:28px;
 
     font-weight:bold;
+}
+
+/* バーガーメニュー */
+
+#menuButton{
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:white;
+
+    box-shadow:0 4px 8px rgba(0,0,0,.2);
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+#menuButton:active{
+
+    transform:scale(.95);
 }
